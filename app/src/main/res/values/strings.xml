@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Simba Chat</string>
+    <string name="desc">Create your account to get started!</string>
+    <string name="title">JOIN SIMBA</string>
+    <string name="Email">Email:</string>
+    <string name="Password">Password:</string>
+    <string name="sign_up">LETS ROAR</string>
+    <string name="SSO">Sign Up With Google</string>
+    <string name="SSO_2">Sign In With Google</string>
+    <string name="Log_In">Have an account? Sign In</string>
+    <string name= "OTP"> One Time Pin</string>
+    <string name= "OTP_Code">OTP Code:</string>
+    <string name= "Authenticate">Authenticate Account</string>
+    <string name= "Warning">Enter your OTP to continue</string>
+    <string name= "Desc_4">Click the button to generate the OTP</string>
+    <string name="OTP_Label">OTP:</string>
+    <string name="OTP_GEN">Click Here To Generate One Time Pin code</string>
+    <string name="Go_To_Sign_In">Have An Account? Sign In</string>
+    <string name="Desc_2">Simba supports anonymous mode for all chats and rooms. Your data is encrypted and never sold</string>
+    <string name="Phone_Number">Phone Number:</string>
+    <string name="Desc_3">Simba supports anonymous mode for all chats and rooms. Your data is encrypted and never sold.</string>
+    <string name="Sign_In">Sign in to continue roaring</string>
+    <string name="title_2">WELCOME BACK</string>
+    <string name="or">OR</string>
+    <string name="Google">Google</string>
+    <string name="Search_Messages">Search Messages</string>
+    <string name="chats">Chats</string>
+    <string name="rooms">Rooms</string>
+    <string name="Discover">Discover</string>
+    <string name="Settings">Settings</string>
+    <string name="News">News</string>
+    <string name="Profile">Profile</string>
+    <string name="Public_Chat_Rooms">Public Chat Rooms</string>
+    <string name="Desc">Anyone can join · Chat anonymously · Content moderated · 3 warnings = removal</string>
+    <string name="Communities">Communities</string>
+    <string name="People_You_May_Know">People You May Know</string>
+    <string name="SA_Links">SA Links</string>
+    <string name="South_Africa_Directories">South Africa Directories</string>
+
+
+</resources>

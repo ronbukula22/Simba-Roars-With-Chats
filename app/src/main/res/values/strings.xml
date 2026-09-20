@@ -8,11 +8,11 @@
     <string name="SSO">Sign Up With Google</string>
     <string name="SSO_2">Sign In With Google</string>
     <string name="Log_In">Have an account? Sign In</string>
-    <string name= "OTP"> One Time Pin</string>
-    <string name= "OTP_Code">OTP Code:</string>
-    <string name= "Authenticate">Authenticate Account</string>
-    <string name= "Warning">Enter your OTP to continue</string>
-    <string name= "Desc_4">Click the button to generate the OTP</string>
+    <string name="OTP"> One Time Pin</string>
+    <string name="OTP_Code">OTP Code:</string>
+    <string name="Authenticate">Authenticate Account</string>
+    <string name="Warning">Enter your OTP to continue</string>
+    <string name="Desc_4">Click the button to generate the OTP</string>
     <string name="OTP_Label">OTP:</string>
     <string name="OTP_GEN">Click Here To Generate One Time Pin code</string>
     <string name="Go_To_Sign_In">Have An Account? Sign In</string>
@@ -36,6 +36,17 @@
     <string name="People_You_May_Know">People You May Know</string>
     <string name="SA_Links">SA Links</string>
     <string name="South_Africa_Directories">South Africa Directories</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name= "Set_Up_Profile">Set Up Your Profile</string>
+    <string name= "Desc_5">This is what other people in your chats will see.</string>
+    <string name="hint">Full Name</string>
+    <string name="continue_text">Continue</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="Status">User Status</string>
 
 
 </resources>

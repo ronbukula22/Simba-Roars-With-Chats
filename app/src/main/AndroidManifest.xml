@@ -12,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SimbaChat">
         <activity
-
             android:name=".auth.SignInActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
@@ -26,7 +25,6 @@
             android:name=".auth.SignUpActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
-
         <activity
             android:name=".dashboard.DashboardActivity"
             android:exported="false"
@@ -35,7 +33,10 @@
             android:name=".auth.OtpActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Profile_Setup"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>
-

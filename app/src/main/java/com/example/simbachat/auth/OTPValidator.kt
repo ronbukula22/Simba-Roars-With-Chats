@@ -1,4 +1,4 @@
-package com.example.simbachat.util
+package com.example.simbachat.auth
 
 object OTPValidator {
     fun isOtpLengthCorrect(enteredCode: String): Boolean =

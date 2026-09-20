@@ -5,17 +5,17 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.simbachat.databinding.ActivityMainBinding
+import com.example.simbachat.databinding.ActivityProfileSetupBinding
 
-class MainActivity : AppCompatActivity() {
+class Profile_Setup : AppCompatActivity() {
     
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityProfileSetupBinding
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityProfileSetupBinding.inflate(layoutInflater)
         setContentView(binding.root)
         
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->

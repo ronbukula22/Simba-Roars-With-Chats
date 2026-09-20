@@ -11,13 +11,14 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.simbachat.R
 import com.example.simbachat.dashboard.DashboardActivity
-import com.example.simbachat.util.OTPValidator
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
 import java.util.concurrent.TimeUnit
+import com.google.firebase.auth.auth
+import kotlin.jvm.java
 
 class OtpActivity : AppCompatActivity() {
 
@@ -54,7 +55,7 @@ class OtpActivity : AppCompatActivity() {
         val verifyButton = findViewById<Button>(R.id.button3)
         val otpInput = findViewById<EditText>(R.id.editTextText3)
 
-        // Send the Firebase OTP
+
         generateButton.setOnClickListener {
 
             if (phoneNumber.isEmpty()) {
@@ -158,13 +159,9 @@ class OtpActivity : AppCompatActivity() {
                         Toast.LENGTH_SHORT
                     ).show()
 
-                    startActivity(
-                        Intent(
-                            this,
-                            DashboardActivity::class.java
-                        )
-                    )
 
+                    val Menu = Intent(this, DashboardActivity::class.java)
+                    startActivity(Menu)
                     finish()
 
                 } else {
@@ -177,4 +174,6 @@ class OtpActivity : AppCompatActivity() {
                 }
             }
     }
+
+
 }

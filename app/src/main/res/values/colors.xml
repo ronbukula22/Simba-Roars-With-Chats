@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gold">#FFD700</color>
+    <color name="dark_grey">#1A1A1A</color>
+    <color name="grey">#8E8E93</color>
+    <color name="status_green">#4CD964</color>
+
+    <color name="bg_black">#080808</color>
+
+    <color name="nav_bg">#111111</color>
+
+    <color name="divider">#302A18</color>
+
+    <color name="gold_muted">#8B6914</color>
+
+    <color name="text_primary">#FFFFFF</color>
+
+    <color name="text_secondary">#A0A0A0</color>
+
+    <color name="text_on_gold">#111111</color>
+
+    <color name="bubble_received">#141414</color>
+</resources>

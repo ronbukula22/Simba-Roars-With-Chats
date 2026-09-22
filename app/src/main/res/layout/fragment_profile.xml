@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#080808"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+
+        <!-- HEADER -->
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Profile"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Manage your Simba account"
+            android:textColor="#888888"
+            android:textSize="13sp" />
+
+
+
+        <!-- PROFILE HERO -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <!-- Avatar -->
+
+            <FrameLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp">
+
+                <TextView
+                    android:id="@+id/profileAvatar"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/profile_avatar_background"
+                    android:gravity="center"
+                    android:text="TN"
+                    android:textColor="#111111"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="bottom|end"
+                    android:background="@drawable/profile_online_indicator" />
+
+            </FrameLayout>
+
+
+            <!-- Name -->
+
+            <TextView
+                android:id="@+id/profileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Thabo Nkosi"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <!-- Contact -->
+
+            <TextView
+                android:id="@+id/profileContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="+27 72 345 6789 · Johannesburg"
+                android:textColor="#888888"
+                android:textSize="13sp" />
+
+
+            <!-- Stats -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!-- Chats -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="7"
+                        android:textColor="#C9A84C"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Chats"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+                <!-- Groups -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:textColor="#C9A84C"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Groups"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+                <!-- Rooms -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3"
+                        android:textColor="#C9A84C"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Rooms"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <!-- ANONYMOUS MODE -->
+
+
+        <LinearLayout
+            android:id="@+id/anonymousCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/profile_card_background"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:gravity="center"
+                    android:text="🔒"
+                    android:textSize="21sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Anonymous Mode"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Signal-grade privacy"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/anonymousSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#C9A84C"
+                    android:checked="false"
+                    android:showText="false" />
+
+            </LinearLayout>
+
+
+            <!-- Anonymous info -->
+
+            <TextView
+                android:id="@+id/anonymousInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="#241F12"
+                android:padding="12dp"
+                android:text="You are now anonymous. Your name and photo are hidden. All chats use ephemeral keys that vanish after 24 hours."
+                android:textColor="#C9A84C"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+
+        <!-- NEWS NOTIFICATIONS -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/profile_card_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="NEWS NOTIFICATIONS"
+                android:textColor="#C9A84C"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+
+            <!-- SA News -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="38dp"
+                    android:layout_height="wrap_content"
+                    android:text="🇿🇦"
+                    android:textSize="19sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="South Africa News"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Breaking SA headlines"
+                        android:textColor="#777777"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/saNewsSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true" />
+
+            </LinearLayout>
+
+
+            <!-- Global News -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="38dp"
+                    android:layout_height="wrap_content"
+                    android:text="🌍"
+                    android:textSize="19sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Global News"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="World affairs &amp; events"
+                        android:textColor="#777777"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/globalNewsSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false" />
+
+            </LinearLayout>
+
+
+            <!-- Breaking Alerts -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="38dp"
+                    android:layout_height="wrap_content"
+                    android:text="🔥"
+                    android:textSize="19sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Breaking Alerts"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Urgent notifications only"
+                        android:textColor="#777777"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/breakingSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <!-- SETTINGS -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/profile_card_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="SETTINGS"
+                android:textColor="#C9A84C"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+
+            <!-- Privacy -->
+
+            <TextView
+                android:id="@+id/privacySetting"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp"
+                android:text="🔐   Privacy &amp; Security                         ›"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+
+            <!-- Moderation -->
+
+            <TextView
+                android:id="@+id/moderationSetting"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp"
+                android:text="🏟️   Room Moderation History                  ›"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+
+            <!-- Appearance -->
+
+            <TextView
+                android:id="@+id/appearanceSetting"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp"
+                android:text="🎨   Appearance                                      ›"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+
+            <!-- Devices -->
+
+            <TextView
+                android:id="@+id/devicesSetting"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp"
+                android:text="📱   Linked Devices                                ›"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+
+            <!-- Help -->
+
+            <TextView
+                android:id="@+id/helpSetting"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp"
+                android:text="❓   Help &amp; Support                               ›"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+
+        <!-- SIGN OUT -->
+
+
+        <TextView
+            android:id="@+id/signOutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/profile_signout_background"
+            android:gravity="center"
+            android:paddingVertical="14dp"
+            android:text="Sign Out"
+            android:textColor="#F87171"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>

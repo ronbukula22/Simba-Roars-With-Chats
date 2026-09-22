@@ -1,0 +1,38 @@
+SimbaChat2 - cleaned Android Studio project structure
+
+SimbaChat2/
+├── app/
+│   ├── build.gradle.kts
+│   ├── google-services.json
+│   └── src/
+│       ├── main/
+│       │   ├── AndroidManifest.xml
+│       │   ├── java/com/example/simbachat/
+│       │   │   ├── MainActivity.kt
+│       │   │   ├── auth/
+│       │   │   │   ├── SignInActivity.kt
+│       │   │   │   ├── SignUpActivity.kt
+│       │   │   │   └── OtpActivity.kt
+│       │   │   ├── dashboard/
+│       │   │   │   └── DashboardActivity.kt
+│       │   │   ├── model/
+│       │   │   │   └── UserInfo.kt
+│       │   │   └── util/
+│       │   │       └── OTPValidator.kt
+│       │   └── res/
+│       │       ├── drawable/
+│       │       ├── layout/
+│       │       ├── mipmap-*/
+│       │       ├── values/
+│       │       ├── values-night/
+│       │       └── xml/
+│       ├── androidTest/
+│       └── test/
+├── build.gradle.kts
+├── gradle.properties
+├── gradle/
+├── gradlew
+├── gradlew.bat
+└── settings.gradle.kts
+
+

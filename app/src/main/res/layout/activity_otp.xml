@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp"
+        android:padding="@dimen/screen_padding"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,8 +25,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingTop="22dp"
-            android:paddingBottom="22dp"
+            android:paddingTop="@dimen/element_padding_vertical"
+            android:paddingBottom="@dimen/element_padding_vertical"
             android:text="@string/OTP"
             android:textSize="32sp"
             android:textColor="@color/gold"/>
@@ -37,8 +37,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingTop="22dp"
-            android:paddingBottom="22dp"
+            android:paddingTop="@dimen/element_padding_vertical"
+            android:paddingBottom="@dimen/element_padding_vertical"
             android:text="@string/Desc_4"
             android:textSize="20sp"
             android:textColor="@color/gold"/>
@@ -50,8 +50,9 @@
             android:text="@string/OTP_GEN"
             android:backgroundTint="@color/gold"
             android:textColor="@color/black"
-            android:paddingTop="22dp"
-            android:paddingBottom="22dp"/>
+            android:minHeight="48dp"
+            android:paddingTop="@dimen/element_padding_vertical"
+            android:paddingBottom="@dimen/element_padding_vertical"/>
 
         <EditText
             android:id="@+id/editTextText3"
@@ -61,16 +62,17 @@
             android:inputType="number"
             android:maxLength="6"
             android:hint="@string/OTP_Label"
-            android:paddingTop="22dp"
-            android:paddingBottom="22dp"
+            android:minHeight="48dp"
+            android:paddingTop="@dimen/element_padding_vertical"
+            android:paddingBottom="@dimen/element_padding_vertical"
             android:textColor="@color/gold"/>
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="22dp"
-            android:paddingBottom="22dp"
+            android:paddingTop="@dimen/element_padding_vertical"
+            android:paddingBottom="@dimen/element_padding_vertical"
             android:text="@string/Desc_3"
             android:textColor="@color/gold"/>
 
@@ -78,17 +80,13 @@
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="22dp"
-            android:paddingBottom="22dp"
+            android:paddingTop="@dimen/element_padding_vertical"
+            android:paddingBottom="@dimen/element_padding_vertical"
+            android:minHeight="48dp"
             android:text="@string/Sign_In"
             android:backgroundTint="@color/gold"
             android:textColor="@color/black"/>
 
     </LinearLayout>
-
-
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

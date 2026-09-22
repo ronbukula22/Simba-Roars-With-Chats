@@ -1,5 +1,6 @@
 package com.example.simbachat
 
+import com.example.simbachat.auth.OTPValidator
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test

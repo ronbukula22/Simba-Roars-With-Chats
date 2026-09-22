@@ -1,3 +1,7 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="screen_padding">12dp</dimen>
+    <dimen name="element_padding_vertical">8dp</dimen>
+    <dimen name="element_padding_horizontal">12dp</dimen>
+    <dimen name="small_padding">4dp</dimen>
 </resources>

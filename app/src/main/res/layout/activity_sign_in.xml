@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp"
+        android:padding="@dimen/screen_padding"
         android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,8 +24,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingTop="22dp"
-            android:paddingBottom="22dp"
+            android:paddingTop="@dimen/element_padding_vertical"
+            android:paddingBottom="@dimen/element_padding_vertical"
             android:text="@string/title_2"
             android:textSize="32sp"
             android:textColor="@color/gold" />
@@ -35,8 +35,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingTop="22dp"
-            android:paddingBottom="22dp"
+            android:paddingTop="@dimen/element_padding_vertical"
+            android:paddingBottom="@dimen/element_padding_vertical"
             android:text="@string/Sign_In"
             android:textSize="20sp"
             android:textColor="@color/gold" />
@@ -47,6 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:minHeight="48dp"
             android:textColor="@color/gold" />
 
         <!-- Phone number -->
@@ -56,8 +57,9 @@
             android:layout_height="wrap_content"
             android:hint="@string/Phone_Number"
             android:inputType="phone"
-            android:paddingTop="22dp"
-            android:paddingBottom="22dp"
+            android:minHeight="48dp"
+            android:paddingTop="@dimen/element_padding_vertical"
+            android:paddingBottom="@dimen/element_padding_vertical"
             android:textColor="@color/gold"
             android:textColorHint="@color/gold" />
 
@@ -66,8 +68,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingTop="22dp"
-            android:paddingBottom="22dp"
+            android:paddingTop="@dimen/element_padding_vertical"
+            android:paddingBottom="@dimen/element_padding_vertical"
             android:text="@string/or"
             android:textColor="@color/gold" />
 
@@ -75,23 +77,24 @@
             android:id="@+id/textView10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="22dp"
-            android:paddingBottom="22dp"
+            android:paddingTop="@dimen/element_padding_vertical"
+            android:paddingBottom="@dimen/element_padding_vertical"
             android:text="@string/SSO_2"
             android:textColor="@color/gold" />
 
-        <ImageView
-            android:id="@+id/imageView"
+        <ImageButton
+            android:id="@+id/SSO"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             app:srcCompat="@drawable/google_sign_in_button" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="22dp"
-            android:paddingBottom="22dp"
+            android:paddingTop="@dimen/element_padding_vertical"
+            android:paddingBottom="@dimen/element_padding_vertical"
             android:text="@string/Desc_3"
             android:textColor="@color/gold" />
 
@@ -100,8 +103,9 @@
             android:id="@+id/send_otp_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="22dp"
-            android:paddingBottom="22dp"
+            android:minHeight="48dp"
+            android:paddingTop="@dimen/element_padding_vertical"
+            android:paddingBottom="@dimen/element_padding_vertical"
             android:text="Send OTP"
             android:backgroundTint="@color/gold"
             android:textColor="@color/black" />

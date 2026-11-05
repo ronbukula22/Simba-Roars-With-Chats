@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_black">
+
+    <!-- Room header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:background="@color/nav_bg">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_back"
+            android:background="@drawable/bg_icon_button"
+            android:contentDescription="Back"
+            android:padding="10dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Joburg Vibes"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Live chat room"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:src="@drawable/simba_logo"
+            android:contentDescription="Simba logo"
+            android:padding="4dp" />
+
+    </LinearLayout>
+
+    <!-- Room messages -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMessages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="12dp"
+        android:clipToPadding="false" />
+
+    <!-- Room message input -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:background="@color/nav_bg">
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:hint="Say something..."
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:background="@drawable/bg_input"
+            android:padding="12dp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines="4" />
+
+        <ImageButton
+            android:id="@+id/btnSend"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_send"
+            android:background="@drawable/bg_send_button"
+            android:contentDescription="Send room message"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

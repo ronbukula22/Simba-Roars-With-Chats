@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".auth.SignInActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_vertical">
+
+            <!-- SimbaChat title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SIMBACHAT"
+                android:textColor="@color/gold"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="20dp"/>
+
+            <!-- Welcome message -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Welcome Back!"
+                android:textColor="@color/gold"
+                android:textSize="23sp"
+                android:gravity="center"
+                android:paddingBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign in to continue to SimbaChat"
+                android:textColor="@color/gold"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:paddingBottom="32dp"/>
+
+            <!-- Email -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email Address"
+                android:textColor="@color/gold"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/loginEmailInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your email"
+                android:inputType="textEmailAddress"
+                android:autofillHints="emailAddress"
+                android:textColor="@color/gold"
+                android:textColorHint="#999999"
+                android:padding="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Password -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textColor="@color/gold"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/loginPasswordInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your password"
+                android:inputType="textPassword"
+                android:autofillHints="password"
+                android:textColor="@color/gold"
+                android:textColorHint="#999999"
+                android:padding="16dp"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Forgot password -->
+            <TextView
+                android:id="@+id/forgotPasswordText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password?"
+                android:textColor="@color/gold"
+                android:gravity="end"
+                android:padding="14dp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <!-- Sign in button -->
+            <Button
+                android:id="@+id/signInButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SIGN IN"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/gold"
+                android:padding="16dp"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Loading -->
+            <ProgressBar
+                android:id="@+id/loginProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:visibility="gone"/>
+
+            <!-- Registration link -->
+            <TextView
+                android:id="@+id/goToSignUpText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account? Create Account"
+                android:textColor="@color/gold"
+                android:gravity="center"
+                android:padding="20dp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

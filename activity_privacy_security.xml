@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#080808"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/privacyBack"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:text="‹  Back"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Privacy &amp; Security"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:text="Control who can see your information and activity."
+            android:textColor="#AAAAAA"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PROFILE VISIBILITY"
+            android:textColor="#AAAAAA"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/profileVisibilityGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/visibilityEveryone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Everyone"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#00C853" />
+
+            <RadioButton
+                android:id="@+id/visibilityNobody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nobody"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#00C853" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#333333" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="LAST SEEN"
+            android:textColor="#AAAAAA"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/lastSeenGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/lastSeenEveryone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Everyone"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#00C853" />
+
+            <RadioButton
+                android:id="@+id/lastSeenNobody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nobody"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#00C853" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#333333" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="READ RECEIPTS"
+            android:textColor="#AAAAAA"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/readReceiptsSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:text="Send read receipts"
+            android:textColor="#FFFFFF"
+            android:buttonTint="#00C853"
+            android:thumbTint="#00C853"
+            android:trackTint="#666666" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#333333" />
+
+
+
+        <TextView
+            android:id="@+id/privacySaveStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#00C853"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</ScrollView>

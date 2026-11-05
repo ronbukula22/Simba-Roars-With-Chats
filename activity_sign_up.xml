@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="JOIN SIMBACHAT"
+            android:textColor="@color/gold"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="Create your account to get started"
+            android:textColor="@color/gold"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/registerNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:hint="Full name"
+            android:inputType="textPersonName"
+            android:minHeight="55dp"
+            android:padding="12dp"
+            android:textColor="@color/gold"
+            android:textColorHint="#A68A45" />
+
+        <EditText
+            android:id="@+id/registerEmailInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:hint="Email address"
+            android:inputType="textEmailAddress"
+            android:minHeight="55dp"
+            android:padding="12dp"
+            android:textColor="@color/gold"
+            android:textColorHint="#A68A45" />
+
+        <EditText
+            android:id="@+id/registerPhoneInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:hint="Phone number"
+            android:inputType="phone"
+            android:minHeight="55dp"
+            android:padding="12dp"
+            android:textColor="@color/gold"
+            android:textColorHint="#A68A45" />
+
+        <EditText
+            android:id="@+id/registerPasswordInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:minHeight="55dp"
+            android:padding="12dp"
+            android:textColor="@color/gold"
+            android:textColorHint="#A68A45" />
+
+        <EditText
+            android:id="@+id/registerConfirmPasswordInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:hint="Confirm password"
+            android:inputType="textPassword"
+            android:minHeight="55dp"
+            android:padding="12dp"
+            android:textColor="@color/gold"
+            android:textColorHint="#A68A45" />
+
+        <ProgressBar
+            android:id="@+id/registerProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/createAccountButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/gold"
+            android:minHeight="55dp"
+            android:text="CREATE ACCOUNT"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/goToSignInText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="Already have an account? Sign in"
+            android:textColor="@color/gold"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+</ScrollView>

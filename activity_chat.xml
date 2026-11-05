@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_black">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:background="@color/nav_bg">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_back"
+            android:background="@drawable/bg_icon_button"
+            android:contentDescription="Back"
+            android:padding="10dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Simba Chat"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Private conversation"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnCall"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_call"
+            android:background="@drawable/bg_icon_button"
+            android:contentDescription="Call"
+            android:padding="10dp" />
+
+    </LinearLayout>
+
+    <!-- Receiver ID -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Receiver ID"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/etReceiver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter receiver Firebase UID"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:singleLine="true"
+            android:inputType="text"
+            android:background="@drawable/bg_input"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+    <!-- Messages -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMessages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="12dp"
+        android:clipToPadding="false" />
+
+    <!-- Message input -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:background="@color/nav_bg">
+
+        <ImageButton
+            android:id="@+id/btnAttach"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_attach"
+            android:background="@drawable/bg_icon_button"
+            android:contentDescription="Attach file"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:hint="Type a message..."
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:background="@drawable/bg_input"
+            android:padding="12dp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines="4" />
+
+        <ImageButton
+            android:id="@+id/btnSend"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_send"
+            android:background="@drawable/bg_send_button"
+            android:contentDescription="Send message"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

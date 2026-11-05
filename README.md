@@ -14,6 +14,16 @@ Alternatively, you can download APK and install it via the File Manager
 SET UP
 Once installed the user will be taken to the Sign Up page where they will sign up and enter their e-mail, password and verify their account, after that they will be taken to the Profile Set-Up page were the user can set up their account and go to the main activity which is the chats and the navigation bar
 
+Chats
 
+Like WhatsApp the first thing the user will be able to click is their chat and talk to their contacts
 
+Discover 
+From here the user can go to any websites from the discover page
+
+Chat room
+the user can go on anonymous chat rooms and talk to who they please, they will be given an anonymous name and can chat
+
+News 
+From here the user can see recent news and get updates and they can also click the news page and go to the page
 

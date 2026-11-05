@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#080808"
@@ -56,10 +56,18 @@
                     android:layout_height="80dp"
                     android:background="@drawable/profile_avatar_background"
                     android:gravity="center"
-                    android:text="TN"
+                    android:text="SC"
                     android:textColor="#111111"
                     android:textSize="30sp"
                     android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/profileAvatarImage"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"
+                    android:contentDescription="Profile picture" />
 
                 <View
                     android:layout_width="22dp"
@@ -94,6 +102,20 @@
                 android:textColor="#888888"
                 android:textSize="13sp" />
 
+            <!-- Edit profile button -->
+            <TextView
+                android:id="@+id/editProfileButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/profile_card_background"
+                android:paddingHorizontal="22dp"
+                android:paddingVertical="10dp"
+                android:text="✏️  Edit Profile"
+                android:textColor="#C9A84C"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
 
             <!-- Stats -->
 
@@ -104,88 +126,7 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <!-- Chats -->
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="7"
-                        android:textColor="#C9A84C"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
-                        android:text="Chats"
-                        android:textColor="#888888"
-                        android:textSize="12sp" />
-
-                </LinearLayout>
-
-
-                <!-- Groups -->
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="2"
-                        android:textColor="#C9A84C"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
-                        android:text="Groups"
-                        android:textColor="#888888"
-                        android:textSize="12sp" />
-
-                </LinearLayout>
-
-
-                <!-- Rooms -->
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="3"
-                        android:textColor="#C9A84C"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
-                        android:text="Rooms"
-                        android:textColor="#888888"
-                        android:textSize="12sp" />
-
-                </LinearLayout>
 
             </LinearLayout>
 
@@ -242,13 +183,20 @@
 
                 </LinearLayout>
 
+
                 <Switch
                     android:id="@+id/anonymousSwitch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:padding="8dp"
+                    android:scaleX="1.3"
+                    android:scaleY="1.3"
                     android:buttonTint="#C9A84C"
                     android:checked="false"
                     android:showText="false" />
+
 
             </LinearLayout>
 
@@ -329,11 +277,25 @@
 
                 </LinearLayout>
 
-                <Switch
-                    android:id="@+id/saNewsSwitch"
+
+
+                <FrameLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true" />
+                    android:layout_height="48dp"
+                    android:minWidth="48dp"
+                    android:gravity="center_vertical">
+
+                    <Switch
+                        android:id="@+id/saNewsSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:checked="true"
+                        android:gravity="center_vertical"
+                        android:showText="false" />
+
+                </FrameLayout>
+
+
 
             </LinearLayout>
 
@@ -376,60 +338,30 @@
 
                 </LinearLayout>
 
-                <Switch
-                    android:id="@+id/globalNewsSwitch"
+
+
+                <FrameLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="false" />
+                    android:layout_height="48dp"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:gravity="center_vertical">
+
+                    <Switch
+                        android:id="@+id/globalNewsSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:checked="false"
+                        android:gravity="center_vertical"
+                        android:showText="false" />
+
+                </FrameLayout>
+
 
             </LinearLayout>
 
 
-            <!-- Breaking Alerts -->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="12dp">
-
-                <TextView
-                    android:layout_width="38dp"
-                    android:layout_height="wrap_content"
-                    android:text="🔥"
-                    android:textSize="19sp" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Breaking Alerts"
-                        android:textColor="#FFFFFF"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Urgent notifications only"
-                        android:textColor="#777777"
-                        android:textSize="11sp" />
-
-                </LinearLayout>
-
-                <Switch
-                    android:id="@+id/breakingSwitch"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true" />
-
-            </LinearLayout>
 
         </LinearLayout>
 
@@ -468,17 +400,7 @@
                 android:textSize="14sp" />
 
 
-            <!-- Moderation -->
 
-            <TextView
-                android:id="@+id/moderationSetting"
-                android:layout_width="match_parent"
-                android:layout_height="54dp"
-                android:gravity="center_vertical"
-                android:paddingHorizontal="16dp"
-                android:text="🏟️   Room Moderation History                  ›"
-                android:textColor="#FFFFFF"
-                android:textSize="14sp" />
 
 
             <!-- Appearance -->
@@ -494,17 +416,6 @@
                 android:textSize="14sp" />
 
 
-            <!-- Devices -->
-
-            <TextView
-                android:id="@+id/devicesSetting"
-                android:layout_width="match_parent"
-                android:layout_height="54dp"
-                android:gravity="center_vertical"
-                android:paddingHorizontal="16dp"
-                android:text="📱   Linked Devices                                ›"
-                android:textColor="#FFFFFF"
-                android:textSize="14sp" />
 
 
             <!-- Help -->

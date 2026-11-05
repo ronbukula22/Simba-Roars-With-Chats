@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#080808"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="22dp">
+
+        <!-- Header -->
+        <TextView
+            android:id="@+id/editProfileBack"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:text="‹   Edit Profile"
+            android:textColor="#FFFFFF"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <!-- Profile picture -->
+        <FrameLayout
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="28dp">
+
+            <ImageView
+                android:id="@+id/editProfilePhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                android:contentDescription="Profile photo" />
+
+            <TextView
+                android:id="@+id/editAvatarInitials"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/profile_avatar_background"
+                android:gravity="center"
+                android:text="SC"
+                android:textColor="#111111"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/changePhotoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:padding="8dp"
+            android:text="Change profile photo"
+            android:textColor="#C9A84C"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- Full name -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Full name"
+            android:textColor="#C9A84C"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/profile_card_background"
+            android:hint="Enter your full name"
+            android:inputType="textPersonName|textCapWords"
+            android:padding="15dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888" />
+
+        <!-- Email -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="Email address"
+            android:textColor="#C9A84C"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/editEmailText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/profile_card_background"
+            android:padding="15dp"
+            android:textColor="#AAAAAA"
+            android:textSize="14sp" />
+
+        <!-- Phone number -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="Phone number"
+            android:textColor="#C9A84C"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editPhoneInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/profile_card_background"
+            android:hint="Enter your phone number"
+            android:inputType="phone"
+            android:padding="15dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888" />
+
+        <!-- About / Status -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="About / Status"
+            android:textColor="#C9A84C"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editStatusInput"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/profile_card_background"
+            android:gravity="top|start"
+            android:hint="Tell people something about yourself"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="160"
+            android:padding="15dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888" />
+
+        <!-- Save button -->
+        <TextView
+            android:id="@+id/saveEditProfileButton"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="30dp"
+            android:background="#C9A84C"
+            android:gravity="center"
+            android:text="Save Changes"
+            android:textColor="#111111"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>

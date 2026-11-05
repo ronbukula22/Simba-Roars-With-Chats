@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,11 +9,14 @@
     android:background="@color/black"
     tools:context=".util.FirstFragment">
 
+    <!-- Search -->
     <EditText
         android:id="@+id/search_bar"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/search_bar_bg"
         android:drawableStart="@android:drawable/ic_menu_search"
         android:drawablePadding="12dp"
@@ -19,63 +24,72 @@
         android:paddingHorizontal="16dp"
         android:textColor="@color/white"
         android:textColorHint="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Chat list -->
     <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/search_bar">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingBottom="16dp">
+            android:paddingBottom="20dp">
 
+            <!-- Direct Messages -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginBottom="8dp"
                 android:text="DIRECT MESSAGES"
                 android:textColor="@color/gold"
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
-            <!-- Using included items for visual preview as requested -->
-            <!-- Direct Message 1 -->
             <include
                 android:id="@+id/chatItem1"
                 layout="@layout/item_chat" />
 
-            <!-- Direct Message 2 -->
             <include
                 android:id="@+id/chatItem2"
                 layout="@layout/item_chat" />
 
-            <!-- Direct Message 3 -->
             <include
                 android:id="@+id/chatItem3"
                 layout="@layout/item_chat" />
 
+            <!-- Group Chats -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginBottom="8dp"
                 android:text="GROUP CHATS"
                 android:textColor="@color/gold"
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
-            <!-- New Group Chat Item -->
+            <!-- New Group -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
                 android:padding="12dp">
+
                 <View
                     android:id="@+id/new_group_avatar"
                     android:layout_width="56dp"
@@ -83,6 +97,7 @@
                     android:background="@drawable/new_group_chat_bg"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
@@ -92,6 +107,7 @@
                     app:layout_constraintStart_toStartOf="@id/new_group_avatar"
                     app:layout_constraintTop_toTopOf="@id/new_group_avatar"
                     app:tint="@color/gold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -103,9 +119,9 @@
                     app:layout_constraintBottom_toBottomOf="@id/new_group_avatar"
                     app:layout_constraintStart_toEndOf="@id/new_group_avatar"
                     app:layout_constraintTop_toTopOf="@id/new_group_avatar" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!-- Group Chat Preview Items -->
             <include
                 android:id="@+id/groupChatItem1"
                 layout="@layout/item_chat" />
@@ -115,6 +131,7 @@
                 layout="@layout/item_chat" />
 
         </LinearLayout>
+
     </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

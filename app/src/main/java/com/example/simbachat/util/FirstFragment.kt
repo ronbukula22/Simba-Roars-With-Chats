@@ -30,62 +30,39 @@ class FirstFragment : Fragment() {
     ) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Temporary test receiver IDs.
-        // Replace these with real Firebase UIDs later.
         val testReceiver1 = "TEST_USER_001"
         val testReceiver2 = "TEST_USER_002"
         val testReceiver3 = "TEST_USER_003"
 
-        // Direct Message 1
         view.findViewById<View>(R.id.chatItem1)?.setOnClickListener {
             openPrivateChat(testReceiver1)
         }
 
-        // Direct Message 2
         view.findViewById<View>(R.id.chatItem2)?.setOnClickListener {
             openPrivateChat(testReceiver2)
         }
 
-        // Direct Message 3
         view.findViewById<View>(R.id.chatItem3)?.setOnClickListener {
             openPrivateChat(testReceiver3)
         }
 
-        // Group Chat 1
         view.findViewById<View>(R.id.groupChatItem1)?.setOnClickListener {
             openRoomChat()
         }
 
-        // Group Chat 2
         view.findViewById<View>(R.id.groupChatItem2)?.setOnClickListener {
             openRoomChat()
         }
     }
 
     private fun openPrivateChat(receiverId: String) {
-
-        val intent =
-            Intent(
-                requireContext(),
-                Chat::class.java
-            )
-
-        intent.putExtra(
-            "receiverId",
-            receiverId
-        )
-
+        val intent = Intent(requireContext(), Chat::class.java)
+        intent.putExtra("receiverId", receiverId)
         startActivity(intent)
     }
 
     private fun openRoomChat() {
-
-        val intent =
-            Intent(
-                requireContext(),
-                Chat_Room::class.java
-            )
-
+        val intent = Intent(requireContext(), Chat_Room::class.java)
         startActivity(intent)
     }
 }

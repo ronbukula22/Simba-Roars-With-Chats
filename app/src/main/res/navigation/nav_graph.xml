@@ -35,4 +35,16 @@
         android:label="Profile"
         tools:layout="@layout/fragment_profile" />
 
+    <fragment
+        android:id="@+id/nav_notifications"
+        android:name="com.example.simbachat.util.NotificationsFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/nav_add_contacts"
+        android:name="com.example.simbachat.util.AddContactsFragment"
+        android:label="Add Contacts"
+        tools:layout="@layout/fragment_add_contacts" />
+
 </navigation>

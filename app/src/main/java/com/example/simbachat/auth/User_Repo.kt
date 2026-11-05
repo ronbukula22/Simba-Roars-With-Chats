@@ -34,7 +34,21 @@ class User_Repo {
         }
 
         doc.set(data, SetOptions.merge()).await()
+
+
+
+        db.collection("public_profiles")
+            .document(user.uid)
+            .set(
+                mapOf(
+                    "uid" to user.uid,
+                    "name" to name
+                ),
+                SetOptions.merge()
+            )
+            .await()
     }
+
 
     suspend fun get_Profile(userId: String = uid!!): ChatUser? =
         users.document(userId).get().await().toObject(ChatUser::class.java)

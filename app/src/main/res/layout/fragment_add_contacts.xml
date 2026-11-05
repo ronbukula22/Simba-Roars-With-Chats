@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#080808"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Contacts"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Find people saved on your phone or SIM card"
+        android:textColor="#C9A84C"
+        android:textSize="14sp"
+        android:layout_marginBottom="18dp" />
+
+    <EditText
+        android:id="@+id/searchContacts"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/icon_box_bg"
+        android:hint="Search name or phone number"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#999999"
+        android:singleLine="true"
+        android:inputType="text"
+        android:paddingHorizontal="14dp"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/contactsStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your contacts will appear here."
+        android:textColor="#C9A84C"
+        android:textSize="14sp"
+        android:paddingVertical="10dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/contactsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </ScrollView>
+
+</LinearLayout>

@@ -6,6 +6,67 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.simbachat.R
+import com.example.simbachat.dashboard.DashboardActivity
+
+class ProfileSetupActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        setContentView(R.layout.activity_profile_setup)
+
+        val nameInput = findViewById<EditText>(R.id.profileNameInput)
+        val statusInput = findViewById<EditText>(R.id.profileStatusInput)
+        val phoneText = findViewById<TextView>(R.id.profilePhoneText)
+        val avatar = findViewById<TextView>(R.id.setupAvatar)
+        val saveButton = findViewById<TextView>(R.id.saveProfileButton)
+
+        // Temporary demo data
+        phoneText.text = "Phone: Demo User"
+
+        saveButton.setOnClickListener {
+
+            val name = nameInput.text.toString().trim()
+
+            if (name.isEmpty()) {
+                nameInput.error = "Enter your name"
+                nameInput.requestFocus()
+                return@setOnClickListener
+            }
+
+            avatar.text = name
+                .split(" ")
+                .filter { it.isNotBlank() }
+                .take(2)
+                .joinToString("") {
+                    it.first().uppercase()
+                }
+
+            Toast.makeText(
+                this,
+                "Welcome, $name!",
+                Toast.LENGTH_SHORT
+            ).show()
+
+            val intent = Intent(
+                this,
+                DashboardActivity::class.java
+            )
+
+            startActivity(intent)
+        }
+    }
+}
+/*original code*/
+/*package com.example.simbachat.auth
+
+import android.content.Intent
+import android.os.Bundle
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.example.simbachat.R
 import com.example.simbachat.dashboard.DashboardActivity
@@ -43,6 +104,7 @@ class ProfileSetupActivity : AppCompatActivity() {
         val currentUser =
             auth.currentUser
 
+        /*
         if (currentUser == null) {
 
             Toast.makeText(
@@ -54,6 +116,9 @@ class ProfileSetupActivity : AppCompatActivity() {
             finish()
             return
         }
+        */
+
+
 
         val phoneNumber =
             currentUser.phoneNumber ?: ""
@@ -143,3 +208,4 @@ class ProfileSetupActivity : AppCompatActivity() {
         }
     }
 }
+ */

@@ -9,6 +9,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.simbachat.R
+import android.app.AlertDialog
+import androidx.core.net.toUri
+
 
 class DiscoverFragment : Fragment() {
 
@@ -246,267 +249,274 @@ class DiscoverFragment : Fragment() {
      * SA LINKS
      */
 
-    private fun setupSALinks(
-        view: View
-    ) {
+    private fun setupSALinks(view: View) {
 
-        view.findViewById<View>(R.id.categoryGovernment)
-            .setOnClickListener {
-                openResource(
-                    "Government Services",
-                    "🏛️",
-                    "Official South African government services and information.",
-                    "https://www.gov.za/services"
-                )
-            }
+        val resources = mapOf(
+            R.id.categoryGovernment to (
+                    "Government Services" to listOf(
+                        "SASSA" to "https://www.sassa.gov.za",
+                        "South African Government" to "https://www.gov.za",
+                        "Department of Home Affairs" to "https://www.dha.gov.za",
+                        "SARS" to "https://www.sars.gov.za",
+                        "UIF uFiling" to "https://www.ufiling.co.za",
+                        "NSFAS" to "https://www.nsfas.org.za",
+                        "SAPS" to "https://www.saps.gov.za",
+                        "Department of Labour" to "https://www.labour.gov.za",
+                        "Department of Health" to "https://www.health.gov.za",
+                        "GCIS" to "https://www.gcis.gov.za",
+                        "Department of Higher Education" to "https://www.dhet.gov.za"
+                    )
+                    ),
 
-        view.findViewById<View>(R.id.categoryEducation)
-            .setOnClickListener {
-                openResource(
-                    "Education",
-                    "🎓",
-                    "Education, schools, training and higher education resources.",
-                    "https://www.education.gov.za/"
-                )
-            }
+            R.id.categoryEducation to (
+                    "Education" to listOf(
+                        "Department of Basic Education" to "https://www.education.gov.za",
+                        "UNISA" to "https://www.unisa.ac.za",
+                        "TVET Colleges SA" to "https://www.tvetcolleges.co.za",
+                        "SA Study" to "https://www.sastudy.co.za",
+                        "Skills Portal" to "https://www.skillsportal.co.za",
+                        "Varsity Wise" to "https://www.varsitywise.com",
+                        "Matric Results" to "https://www.education.gov.za"
+                    )
+                    ),
 
-        view.findViewById<View>(R.id.categoryJobs)
-            .setOnClickListener {
-                openResource(
-                    "Jobs & Careers",
-                    "💼",
-                    "Employment opportunities, career information and government job resources.",
-                    "https://www.gov.za/jobs"
-                )
-            }
+            R.id.categoryJobs to (
+                    "Jobs & Careers" to listOf(
+                        "Careers24" to "https://www.careers24.com",
+                        "Indeed SA" to "https://za.indeed.com",
+                        "PNet" to "https://www.pnet.co.za",
+                        "Job Mail" to "https://www.jobmail.co.za",
+                        "Careers Portal" to "https://www.careersportal.co.za",
+                        "Career Junction" to "https://www.careerjunction.co.za",
+                        "Gumtree Jobs" to "https://www.gumtree.co.za/jobs"
+                    )
+                    ),
 
-        view.findViewById<View>(R.id.categoryNews)
-            .setOnClickListener {
-                openResource(
-                    "News",
-                    "📰",
-                    "News and current affairs resources.",
-                    "https://www.sabcnews.com/"
-                )
-            }
+            R.id.categoryNews to (
+                    "News" to listOf(
+                        "News24" to "https://www.news24.com",
+                        "SABC News" to "https://www.sabcnews.com",
+                        "eNCA" to "https://www.enca.com",
+                        "IOL" to "https://www.iol.co.za",
+                        "TimesLIVE" to "https://www.timeslive.co.za",
+                        "Daily Maverick" to "https://www.dailymaverick.co.za",
+                        "The Citizen" to "https://www.citizen.co.za",
+                        "BusinessTech" to "https://businesstech.co.za",
+                        "MyBroadband" to "https://mybroadband.co.za"
+                    )
+                    ),
 
-        view.findViewById<View>(R.id.categorySports)
-            .setOnClickListener {
-                openResource(
-                    "Sports",
-                    "⚽",
-                    "South African sport and recreation information.",
-                    "https://www.srsa.gov.za/"
-                )
-            }
+            R.id.categorySports to (
+                    "Sports" to listOf(
+                        "SuperSport" to "https://supersport.com",
+                        "Soccer Laduma" to "https://www.soccerladuma.co.za",
+                        "LiveScore" to "https://www.livescore.com",
+                        "ESPN" to "https://www.espn.com",
+                        "Cricbuzz" to "https://www.cricbuzz.com"
+                    )
+                    ),
 
-        view.findViewById<View>(R.id.categoryWeather)
-            .setOnClickListener {
-                openResource(
-                    "Weather",
-                    "🌦️",
-                    "Weather forecasts and warnings for South Africa.",
-                    "https://www.weathersa.co.za/"
-                )
-            }
+            R.id.categoryWeather to (
+                    "Weather" to listOf(
+                        "SA Weather Service" to "https://www.weathersa.co.za",
+                        "AccuWeather" to "https://www.accuweather.com",
+                        "Weather.com" to "https://weather.com",
+                        "Windy" to "https://www.windy.com"
+                    )
+                    ),
 
-        view.findViewById<View>(R.id.categoryHealth)
-            .setOnClickListener {
-                openResource(
-                    "Health",
-                    "🏥",
-                    "Public health information and services.",
-                    "https://www.health.gov.za/"
-                )
-            }
+            R.id.categoryHealth to (
+                    "Health" to listOf(
+                        "Department of Health" to "https://www.health.gov.za",
+                        "WebMD" to "https://www.webmd.com",
+                        "Mayo Clinic" to "https://www.mayoclinic.org",
+                        "Health24" to "https://www.health24.com",
+                        "WHO" to "https://www.who.int"
+                    )
+                    ),
 
-        view.findViewById<View>(R.id.categoryShopping)
-            .setOnClickListener {
-                openResource(
-                    "Shopping",
-                    "🛒",
-                    "Online shopping and retail resources.",
-                    "https://www.takealot.com/"
-                )
-            }
+            R.id.categoryShopping to (
+                    "Shopping" to listOf(
+                        "Takealot" to "https://www.takealot.com",
+                        "Makro" to "https://www.makro.co.za",
+                        "Game" to "https://www.game.co.za",
+                        "Checkers" to "https://www.checkers.co.za",
+                        "Shoprite" to "https://www.shoprite.co.za",
+                        "Pick n Pay" to "https://www.pnp.co.za",
+                        "Woolworths" to "https://www.woolworths.co.za",
+                        "Mr Price" to "https://www.mrp.com",
+                        "Ackermans" to "https://www.ackermans.co.za"
+                    )
+                    ),
 
-        view.findViewById<View>(R.id.categoryBanking)
-            .setOnClickListener {
-                openResource(
-                    "Banking & Finance",
-                    "💳",
-                    "Banking, financial information and economic resources.",
-                    "https://www.resbank.co.za/"
-                )
-            }
+            R.id.categoryBanking to (
+                    "Banking & Finance" to listOf(
+                        "FNB" to "https://www.fnb.co.za",
+                        "Standard Bank" to "https://www.standardbank.co.za",
+                        "Capitec" to "https://www.capitecbank.co.za",
+                        "Nedbank" to "https://www.nedbank.co.za",
+                        "Absa" to "https://www.absa.co.za",
+                        "Old Mutual" to "https://www.oldmutual.co.za",
+                        "Sanlam" to "https://www.sanlam.co.za"
+                    )
+                    ),
 
-        view.findViewById<View>(R.id.categoryInsurance)
-            .setOnClickListener {
-                openResource(
-                    "Insurance",
-                    "🛡️",
-                    "Financial sector and insurance information.",
-                    "https://www.fsca.co.za/"
-                )
-            }
+            R.id.categoryInsurance to (
+                    "Insurance" to listOf(
+                        "Hippo" to "https://www.hippo.co.za",
+                        "Momentum" to "https://www.momentum.co.za",
+                        "Discovery" to "https://www.discovery.co.za",
+                        "OUTsurance" to "https://www.outsurance.co.za"
+                    )
+                    ),
 
-        view.findViewById<View>(R.id.categoryEntertainment)
-            .setOnClickListener {
-                openResource(
-                    "Entertainment",
-                    "🎬",
-                    "Film, television, arts and entertainment resources.",
-                    "https://www.nfvf.co.za/"
-                )
-            }
+            R.id.categoryEntertainment to (
+                    "Entertainment" to listOf(
+                        "YouTube" to "https://www.youtube.com",
+                        "TikTok" to "https://www.tiktok.com",
+                        "Facebook" to "https://www.facebook.com",
+                        "Instagram" to "https://www.instagram.com",
+                        "X (Twitter)" to "https://x.com",
+                        "Spotify" to "https://www.spotify.com",
+                        "Netflix" to "https://www.netflix.com"
+                    )
+                    ),
 
-        view.findViewById<View>(R.id.categoryTechnology)
-            .setOnClickListener {
-                openResource(
-                    "Technology",
-                    "💻",
-                    "Technology and digital resources.",
-                    "https://www.gov.za/"
-                )
-            }
+            R.id.categoryTechnology to (
+                    "Technology" to listOf(
+                        "MyBroadband" to "https://mybroadband.co.za",
+                        "TechCentral" to "https://techcentral.co.za",
+                        "CNET" to "https://www.cnet.com",
+                        "TechCrunch" to "https://techcrunch.com"
+                    )
+                    ),
 
-        view.findViewById<View>(R.id.categoryScience)
-            .setOnClickListener {
-                openResource(
-                    "Science",
-                    "🔬",
-                    "Science, technology and innovation resources.",
-                    "https://www.dsi.gov.za/"
-                )
-            }
+            R.id.categoryScience to (
+                    "Science" to listOf(
+                        "National Geographic" to "https://www.nationalgeographic.com",
+                        "Scientific American" to "https://www.scientificamerican.com",
+                        "ScienceDaily" to "https://www.sciencedaily.com"
+                    )
+                    ),
 
-        view.findViewById<View>(R.id.categorySearch)
-            .setOnClickListener {
-                openResource(
-                    "Search Engines",
-                    "🔎",
-                    "Search and information discovery tools.",
-                    "https://www.google.co.za/"
-                )
-            }
+            R.id.categorySearch to (
+                    "Search Engines" to listOf(
+                        "Google" to "https://www.google.com",
+                        "Bing" to "https://www.bing.com",
+                        "Yahoo" to "https://www.yahoo.com"
+                    )
+                    ),
 
-        view.findViewById<View>(R.id.categoryEmail)
-            .setOnClickListener {
-                openResource(
-                    "Email Services",
-                    "✉️",
-                    "Online email and communication services.",
-                    "https://mail.google.com/"
-                )
-            }
+            R.id.categoryEmail to (
+                    "Email Services" to listOf(
+                        "Gmail" to "https://mail.google.com",
+                        "Outlook" to "https://outlook.live.com",
+                        "Yahoo Mail" to "https://mail.yahoo.com"
+                    )
+                    ),
 
-        view.findViewById<View>(R.id.categoryMaps)
-            .setOnClickListener {
-                openResource(
-                    "Maps & Navigation",
-                    "🗺️",
-                    "Maps, directions and navigation services.",
-                    "https://www.google.com/maps"
-                )
-            }
+            R.id.categoryMaps to (
+                    "Maps & Navigation" to listOf(
+                        "Google Maps" to "https://maps.google.com",
+                        "Waze" to "https://www.waze.com",
+                        "OpenStreetMap" to "https://www.openstreetmap.org"
+                    )
+                    ),
 
-        view.findViewById<View>(R.id.categoryClassifieds)
-            .setOnClickListener {
-                openResource(
-                    "Classifieds",
-                    "📋",
-                    "Online classified listings and marketplaces.",
-                    "https://www.gumtree.co.za/"
-                )
-            }
+            R.id.categoryClassifieds to (
+                    "Classifieds" to listOf(
+                        "Gumtree SA" to "https://www.gumtree.co.za",
+                        "Junk Mail" to "https://www.junkmail.co.za",
+                        "AutoTrader" to "https://www.autotrader.co.za"
+                    )
+                    ),
 
-        view.findViewById<View>(R.id.categoryTravel)
-            .setOnClickListener {
-                openResource(
-                    "Travel & Accommodation",
-                    "✈️",
-                    "Travel information, destinations and tourism resources.",
-                    "https://www.southafrica.net/"
-                )
-            }
+            R.id.categoryTravel to (
+                    "Travel & Accommodation" to listOf(
+                        "Booking.com" to "https://www.booking.com",
+                        "Busbud" to "https://www.busbud.com",
+                        "Travelstart" to "https://www.travelstart.co.za",
+                        "Airbnb" to "https://www.airbnb.com"
+                    )
+                    ),
 
-        view.findViewById<View>(R.id.categoryCrypto)
-            .setOnClickListener {
-                openResource(
-                    "Cryptocurrency",
-                    "₿",
-                    "Financial and cryptocurrency information.",
-                    "https://www.resbank.co.za/"
-                )
-            }
+            R.id.categoryCrypto to (
+                    "Cryptocurrency" to listOf(
+                        "Luno" to "https://www.luno.com",
+                        "VALR" to "https://www.valr.com",
+                        "Binance" to "https://www.binance.com"
+                    )
+                    ),
 
-        view.findViewById<View>(R.id.categoryInformation)
-            .setOnClickListener {
-                openResource(
-                    "Information & Knowledge",
-                    "📚",
-                    "General knowledge and information resources.",
-                    "https://www.wikipedia.org/"
-                )
-            }
+            R.id.categoryInformation to (
+                    "Information & Knowledge" to listOf(
+                        "Wikipedia" to "https://www.wikipedia.org",
+                        "Britannica" to "https://www.britannica.com"
+                    )
+                    ),
 
-        view.findViewById<View>(R.id.categoryReligion)
-            .setOnClickListener {
-                openResource(
-                    "Religion",
-                    "⛪",
-                    "Religious organisations and information resources.",
-                    "https://www.sacbc.org.za/"
-                )
-            }
+            R.id.categoryReligion to (
+                    "Religion" to listOf(
+                        "Bible Gateway" to "https://www.biblegateway.com",
+                        "YouVersion Bible" to "https://www.bible.com",
+                        "Islamic Finder" to "https://www.islamicfinder.org"
+                    )
+                    ),
 
-        view.findViewById<View>(R.id.categoryGaming)
-            .setOnClickListener {
-                openResource(
-                    "Gaming",
-                    "🎮",
-                    "Gaming, consoles, accessories and games.",
-                    "https://www.takealot.com/gaming"
-                )
-            }
+            R.id.categoryGaming to (
+                    "Gaming" to listOf(
+                        "CrazyGames" to "https://www.crazygames.com",
+                        "Poki" to "https://poki.com",
+                        "GamePix" to "https://www.gamepix.com",
+                        "Y8 Games" to "https://www.y8.com",
+                        "Miniclip" to "https://www.miniclip.com",
+                        "Coolmath Games" to "https://www.coolmathgames.com",
+                        "Friv" to "https://friv.com",
+                        "Agame" to "https://www.agame.com",
+                        "Addicting Games" to "https://www.addictinggames.com",
+                        "Kongregate" to "https://www.kongregate.com",
+                        "Armor Games" to "https://armorgames.com",
+                        "Newgrounds" to "https://www.newgrounds.com"
+                    )
+                    )
+        )
+
+        resources.forEach { (categoryId, resource) ->
+
+            val (categoryName, links) = resource
+
+            view.findViewById<View>(categoryId)
+                .setOnClickListener {
+                    showResourceLinks(categoryName, links)
+                }
+        }
     }
 
     /*
-     * OPEN RESOURCE DETAIL
+     * DISPLAY CATEGORY WEBSITES
      */
 
-    private fun openResource(
+    private fun showResourceLinks(
         category: String,
-        icon: String,
-        description: String,
-        url: String
+        links: List<Pair<String, String>>
     ) {
 
-        val intent = Intent(
-            requireContext(),
-            ResourceDetailActivity::class.java
-        )
+        val websiteNames = links.map { it.first }.toTypedArray()
 
-        intent.putExtra(
-            "category",
-            category
-        )
+        AlertDialog.Builder(requireContext())
+            .setTitle(category)
+            .setItems(websiteNames) { _, which ->
 
-        intent.putExtra(
-            "icon",
-            icon
-        )
+                val url = links[which].second
 
-        intent.putExtra(
-            "description",
-            description
-        )
+                val intent = Intent(
+                    Intent.ACTION_VIEW,
+                    url.toUri()
+                )
 
-        intent.putExtra(
-            "url",
-            url
-        )
-
-        startActivity(intent)
+                startActivity(intent)
+            }
+            .setNegativeButton("Close", null)
+            .show()
     }
 }
